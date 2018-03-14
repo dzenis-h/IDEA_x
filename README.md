@@ -1,14 +1,14 @@
 ___
-> ## IDEA_x => NODE/Express app that helps you create and save your coding ideas :)
+> #### IDEA_x => NODE/Express app that helps you create and save your coding ideas :)
 ___
 > > If you want to use the code, few things you need to do:
 > > * Git clone this repo,
 > > * Run npm install,
-> > * Set up ypur local MongoDB enviorment,
-> > * Run npm run stat command.
+> > * Set up your local MongoDB environment,
+> > * Run npm run start command.
 > > ___
 > >
-> ### Among other things it uses:
+> #### Among other things it uses:
 > > * bootstrap 4,
 > > * bcrypt,
 > > * body-parser
