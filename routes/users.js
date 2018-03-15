@@ -35,8 +35,8 @@ router.post('/register', (req, res) => {
     errors.push({text:'Passwords do not match'});
   }
 
-  if(req.body.password.length < 4){
-    errors.push({text:'Password must be at least 4 characters'});
+  if(req.body.password.length < 6){
+    errors.push({text:'Password must be at least 6 characters'});
   }
 
   if(errors.length > 0){
@@ -51,7 +51,7 @@ router.post('/register', (req, res) => {
     User.findOne({email: req.body.email})
       .then(user => {
         if(user){
-          req.flash('error_msg', 'Email already regsitered');
+          req.flash('error_msg', 'Email is already in use');
           res.redirect('/users/register');
         } else {
           const newUser = new User({
