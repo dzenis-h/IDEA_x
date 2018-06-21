@@ -5,7 +5,7 @@ ___
 > > * Git clone this repo,
 > > * Run npm install,
 > > * Set up your local MongoDB environment,
-> > * Run npm run start command.
+> > * Run npm start command.
 > > ___
 > >
 > #### Among other things it uses:
