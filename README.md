@@ -20,5 +20,3 @@ ___
 > > * express-session,
 > > * passport [inc local & jwt] ...
 ___
-
-> ### It's deployed on Heroku: https://ideax.herokuapp.com/about
