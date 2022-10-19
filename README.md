@@ -5,7 +5,7 @@ ___
 > > * Git clone this repo,
 > > * Run npm install,
 > > * Set up your local MongoDB environment,
-> > * Run npm run start command.
+> > * Run npm start command.
 > > ___
 > >
 > #### Among other things it uses:
@@ -20,5 +20,3 @@ ___
 > > * express-session,
 > > * passport [inc local & jwt] ...
 ___
-
-> ### It's deployed on Heroku: https://ideax.herokuapp.com/about
