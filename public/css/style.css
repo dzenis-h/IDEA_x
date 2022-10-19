@@ -2,3 +2,15 @@
   width:130px;
   margin:auto;
 }
+
+body {
+  background-image: url(../img/back2.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.navbar {
+  padding-top: 15px;
+  border-bottom: 2px solid whitesmoke;  
+}
