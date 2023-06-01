@@ -1,7 +1,7 @@
 ##
 # ![IDEA_x logo](https://raw.githubusercontent.com/dzenis-h/IDEA_x/master/public/favicon.ico) IDEA_x
 
-## Overview 🌅
+## Overview 📑
 IDEA_x is a simple CRUD - Node/Express app that helps you create and save new coding ideas. You can see a screenshot of the app below.
 
 ![IDEA_x screenshot](https://drive.google.com/uc?export=view&id=1w3RNcfm4Ss_HpCG-zBLsmCpNXgZp29Hd)
