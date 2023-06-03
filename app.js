@@ -51,7 +51,7 @@ store.on('error', (error) => {
 // Configure session middleware using MongoDBStore
 app.use(
   session({
-    secret: SECRET,
+    secret: db.secret,
     resave: false,
     saveUninitialized: false,
     store: store,
