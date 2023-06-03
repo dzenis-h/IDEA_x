@@ -1,5 +1,5 @@
 node_modules
+/config/key.js
 .DS_Store
 public/.DS_Store
 .env
-config/key.js
