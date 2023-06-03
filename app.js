@@ -8,10 +8,6 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const mongoose = require("mongoose");
 
-// setInterval(function() {
-//   http.get("http://idea--x.herokuapp.com/");
-// }, 3600000); // every 1h
-
 const app = express();
 
 // Load routes
@@ -27,13 +23,15 @@ const db = require("./config/database");
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 
-// Connect to mongoose
+// Connect to MongoDB
 mongoose
   .connect(db.mongoURI, {
-    useMongoClient: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
   })
-  .then(() => console.log("MongoDB Connected..."))
-  .catch(err => console.log(err));
+  .then(() => console.log('MongoDB Connected...'))
+  .catch((err) => console.log(err));
 
 // Handlebars Middleware
 app.engine(
@@ -95,7 +93,7 @@ app.get("/about", (req, res) => {
 app.use("/ideas", ideas);
 app.use("/users", users);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5500;
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);

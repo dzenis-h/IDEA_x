@@ -1,5 +1,7 @@
-if(process.env.NODE_ENV === 'production'){
-  module.exports = {mongoURI: process.env.MONGO_URI}
-} else {
-  module.exports = {mongoURI: 'mongodb://localhost/ideax-dev'}
-}
+const keyDev = require("./key");
+
+const mongoURI = process.env.NODE_ENV === "production" 
+  ? process.env.MONGO_URI
+  : keyDev;
+
+module.exports = { mongoURI };

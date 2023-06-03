@@ -1,16 +1,46 @@
-.logo{
-  width:130px;
-  margin:auto;
+.logo {
+  width: 130px;
+  margin: auto;
 }
 
-body {
-  background-image: url(../img/back2.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/back2.jpg");
+  /* Full height */
+  height: 100%;
 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navbar {
   padding-top: 15px;
-  border-bottom: 2px solid whitesmoke;  
+  border-bottom: 2px solid whitesmoke;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about {
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: black !important;
 }
