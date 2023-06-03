@@ -29,9 +29,7 @@ mongoose.connect(db.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true,
   .catch((err) => console.log(err));
 
 // Adding a session store
-const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
-
 // Configure MongoDB Atlas connection details
 const store = new MongoDBStore({
   uri: db.mongoURI,
