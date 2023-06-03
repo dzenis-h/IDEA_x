@@ -28,6 +28,32 @@ mongoose.connect(db.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true,
   .then(() => console.log('MongoDB Connected...'))
   .catch((err) => console.log(err));
 
+// Adding a session store
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
+
+// Configure MongoDB Atlas connection details
+const store = new MongoDBStore({
+  uri: db.mongoURI,
+  collection: 'sessions',
+  // Additional options if needed
+});
+
+// Handle MongoDB connection errors
+store.on('error', (error) => {
+  console.error('MongoDB session store error:', error);
+});
+
+// Configure session middleware using MongoDBStore
+app.use(
+  session({
+    secret: db.secret,
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+  })
+);
+
 // Handlebars Middleware
 app.engine(
   "handlebars",
