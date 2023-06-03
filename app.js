@@ -53,7 +53,7 @@ store.on('error', (error) => {
 // Configure session middleware using MongoDBStore
 app.use(
   session({
-    secret: "kakoTiJeNena",
+    secret: SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
