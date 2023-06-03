@@ -9,11 +9,11 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const mongoose = require("mongoose");
 
+// Get the secret values
 const MONGO_URI = process.env.MONGO_URI;
 const SECRET = process.env.SECRET;
 
-
-
+// Init app
 const app = express();
 
 // Load routes
@@ -30,7 +30,7 @@ const db = require("./config/database");
 mongoose.Promise = global.Promise;
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useMongoClient: true })
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected...'))
   .catch((err) => console.log(err));
 
