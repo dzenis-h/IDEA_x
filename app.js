@@ -10,8 +10,8 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 
 // Get the secret values
-const MONGO_URI = process.env.MONGO_DEV;
-const SECRET = process.env.SECRET_DEV;
+const MONGO_URI = process.env.MONGO_URI;
+const SECRET = process.env.SECRET;
 
 // Init app
 const app = express();
@@ -30,7 +30,7 @@ const db = require("./config/database");
 mongoose.Promise = global.Promise;
 
 // Connect to MongoDB
-mongoose.connect(db.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected...'))
   .catch((err) => console.log(err));
 
@@ -51,7 +51,7 @@ store.on('error', (error) => {
 // Configure session middleware using MongoDBStore
 app.use(
   session({
-    secret: db.secret,
+    secret: SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
@@ -80,7 +80,7 @@ app.use(methodOverride("_method"));
 // Express session midleware
 app.use(
   session({
-    secret: db.secret,
+    secret: SECRET,
     resave: true,
     saveUninitialized: true
   })

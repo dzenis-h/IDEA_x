@@ -1,6 +1,6 @@
 {
   "name": "idea_x",
-  "version": "1.0.1",
+  "version": "1.5.0",
   "description": "App that helps you create and save new coding ideas",
   "main": "app.js",
   "scripts": {
@@ -19,13 +19,15 @@
     "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.1.3",
     "express": "^4.15.4",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "3.1.0",
     "express-session": "^1.17.3",
     "method-override": "^2.3.9",
     "mongodb": "^2.2.36",
     "mongoose": "^5.13.17",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "handlebars": "^4.5.0"
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.7"
   }
 }
