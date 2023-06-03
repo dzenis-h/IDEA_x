@@ -1,7 +1,5 @@
-const keyDev = require("./key");
-
 const mongoURI = process.env.NODE_ENV === "production" 
   ? process.env.MONGO_URI
-  : keyDev;
+  : require("./key")(mongo);
 
 module.exports = { mongoURI };
