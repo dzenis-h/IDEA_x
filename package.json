@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Dzenis-H",
+  "author": {
+    "name": "Dzenis H.",
+    "email": "developer.dzenis@icloud.com",
+    "url": "https://dzenis.tech"
+  },
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -21,9 +25,7 @@
     "mongodb": "^2.2.36",
     "mongoose": "^5.13.17",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
-  },
-  "devDependencies": {
+    "passport-local": "^1.0.0",
     "handlebars": "^4.5.0"
   }
 }
