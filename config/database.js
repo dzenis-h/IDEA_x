@@ -1,9 +1,9 @@
 require('dotenv').config();
-const key = require("./key");
+// const key = require("./key");
 
 const mongoURI = process.env.NODE_ENV === 'production'
   ? process.env.MONGO_URI
-  : key
+  : null
 
   const secret = process.env.NODE_ENV === 'production'
   ? process.env.SECRET
