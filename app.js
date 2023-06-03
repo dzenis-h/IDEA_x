@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
@@ -7,6 +8,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const mongoose = require("mongoose");
+
 
 const app = express();
 
@@ -74,7 +76,7 @@ app.use(methodOverride("_method"));
 // Express session midleware
 app.use(
   session({
-    secret: "secret",
+    secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true
   })
